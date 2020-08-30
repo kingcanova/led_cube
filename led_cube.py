@@ -96,6 +96,7 @@ def moving_pixel():
 
 
 def function3():
+    sleepTime = .5
     # CYCLE 1
     layer1.off()
     layer2.on()

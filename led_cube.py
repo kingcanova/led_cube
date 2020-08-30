@@ -89,10 +89,10 @@ def function_two():
     led_leads(0, 0, 1, 0)
     sleep(sleepTime)
     # CYCLE 8
-    layer1.off()
     layer2.on()
+    layer1.off()
     led_leads(0, 0, 1, 0)
-    sleep(sleepTime)
+    sleep(1)
 
 
 while True:

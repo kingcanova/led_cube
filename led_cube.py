@@ -137,6 +137,36 @@ def function3():
     layer1.on()
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
+    # CYCLE 9
+    layer2.off()
+    layer1.on()
+    led_leads(0, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 10
+    layer1.off()
+    layer2.on()
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 11
+    layer2.off()
+    layer1.on()
+    led_leads(0, 0, 1, 0)
+    sleep(sleepTime)
+    # CYCLE 12
+    layer1.off()
+    layer2.on()
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 13
+    layer2.off()
+    layer1.on()
+    led_leads(0, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 14
+    layer2.off()
+    layer1.on()
+    led_leads(1, 0, 0, 0)
+    sleep(sleepTime)
 
 
 while True:

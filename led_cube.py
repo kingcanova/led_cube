@@ -71,6 +71,16 @@ def function_two():
     layer1.off()
     layer2.on()
     sleep(sleepTime)
+    # CYCLE 7
+    four.on()
+    one.off()
+    two.off()
+    three.off()
+    sleep(sleepTime)
+    # CYCLE 8
+    layer1.off()
+    layer2.on()
+    sleep(sleepTime)
     # CYCLE 5
     three.on()
     two.off()
@@ -81,15 +91,6 @@ def function_two():
     layer1.on()
     layer2.off()
     sleep(sleepTime)
-    # CYCLE 7
-    four.on()
-    one.off()
-    two.off()
-    three.off()
-    sleep(sleepTime)
-    # CYCLE 8
-    layer1.off()
-    layer2.on()
 
 
 while True:

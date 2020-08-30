@@ -95,7 +95,50 @@ def moving_pixel():
     sleep(sleepTime)
 
 
+def function3():
+    # CYCLE 1
+    layer1.off()
+    layer2.on()
+    led_leads(1, 0, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 2
+    layer2.off()
+    layer1.on()
+    led_leads(0, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 3
+    layer1.off()
+    layer2.on()
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 4
+    layer2.off()
+    layer1.on()
+    led_leads(0, 0, 1, 0)
+    sleep(sleepTime)
+    # CYCLE 5
+    layer1.off()
+    layer2.on()
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 6
+    layer2.off()
+    layer1.on()
+    led_leads(0, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 7
+    layer1.off()
+    layer2.on()
+    led_leads(1, 0, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 8
+    layer2.off()
+    layer1.on()
+    led_leads(1, 0, 0, 0)
+    sleep(sleepTime)
+
+
 while True:
-    moving_pixel()
+    function3()
 
 

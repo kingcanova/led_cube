@@ -9,7 +9,7 @@ one = LED(6)
 two = LED(26)
 three = LED(13)
 four = LED(19)
-sleepTime = .008
+sleepTime = .01
 
 one.off()
 two.off()

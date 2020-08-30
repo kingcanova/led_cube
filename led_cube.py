@@ -57,8 +57,7 @@ def layer_leads(one, two):
 def wall_swing():
     sleepTime = .5
     # CYCLE 1
-    layer1.off()
-    layer2.off()
+    layer_leads(0, 0)
     led_leads(1, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 2
@@ -75,37 +74,32 @@ def wall_swing():
 def moving_pixel():
     sleepTime = .5
     # CYCLE 1
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 2
-    layer1.on()
-    layer2.off()
+    layer_leads(1, 0)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 3
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 4
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 5
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 6
-    layer1.on()
-    layer2.off()
+    layer_leads(1, 0)
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 7
     led_leads(0, 0, 1, 0)
     sleep(sleepTime)
     # CYCLE 8
-    layer2.on()
-    layer1.off()
+    layer_leads(0, 1)
     led_leads(0, 0, 1, 0)
     sleep(sleepTime)
 
@@ -113,73 +107,59 @@ def moving_pixel():
 def diagonal_bounce():
     sleepTime = .5
     # CYCLE 1
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 2
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 3
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 4
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(0, 0, 1, 0)
     sleep(sleepTime)
     # CYCLE 5
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 6
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 7
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 8
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 9
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 10
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 11
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 0, 1, 0)
     sleep(sleepTime)
     # CYCLE 12
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(0, 0, 0, 1)
     sleep(sleepTime)
     # CYCLE 13
-    layer1.off()
-    layer2.on()
+    layer_leads(0, 1)
     led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 14
-    layer2.off()
-    layer1.on()
+    layer_leads(1, 0)
     led_leads(1, 0, 0, 0)
     sleep(sleepTime)
 
@@ -206,5 +186,8 @@ def wave():
 
 while True:
     wave()
+    wall_swing()
+    moving_pixel()
+    diagonal_bounce()
 
 

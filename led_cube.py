@@ -31,9 +31,11 @@ def function_one():
     # CYCLE 3
     three.on()
     four.on()
+    sleep(sleepTime)
     # CYCLE 4
     one.on()
     three.on()
+    sleep(sleepTime)
 
 
 while True:

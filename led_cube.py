@@ -57,7 +57,7 @@ def wall_swing():
     sleep(sleepTime)
 
 
-def function_two():
+def moving_pixel():
     sleepTime = .5
     # CYCLE 1
     layer1.off()
@@ -92,10 +92,10 @@ def function_two():
     layer2.on()
     layer1.off()
     led_leads(0, 0, 1, 0)
-    sleep(1)
+    sleep(sleepTime)
 
 
 while True:
-    wall_swing()
+    moving_pixel()
 
 

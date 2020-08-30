@@ -74,45 +74,40 @@ def function_two():
     # CYCLE 1
     layer1.off()
     layer2.on()
-    one.on()
-    two.off()
-    three.off()
-    four.off()
+    led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 2
     layer1.on()
     layer2.off()
+    led_leads(1, 0, 0, 0)
     sleep(sleepTime)
     # CYCLE 3
-    two.on()
-    one.off()
-    three.off()
-    four.off()
+    led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 4
     layer1.off()
     layer2.on()
-    sleep(sleepTime)
-    # CYCLE 8
-    layer1.off()
-    layer2.on()
-    sleep(sleepTime)
-    # CYCLE 7
-    four.on()
-    one.off()
-    two.off()
-    three.off()
+    led_leads(0, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 5
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 6
+    layer1.on()
+    layer2.off()
+    led_leads(0, 0, 0, 1)
+    sleep(sleepTime)
+    # CYCLE 7
     three.on()
     two.off()
     one.off()
     four.off()
     sleep(sleepTime)
-    # CYCLE 6
+    # CYCLE 8
     layer1.on()
     layer2.off()
     sleep(sleepTime)
+
 
 while True:
     function_two()

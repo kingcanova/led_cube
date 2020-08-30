@@ -17,7 +17,7 @@ three.off()
 four.off()
 
 
-def led_leads(a,b,c,d):
+def led_leads(a, b, c, d):
     if a == 1:
         one.on()
     else:
@@ -44,28 +44,16 @@ def wall_swing():
     # CYCLE 1
     layer1.off()
     layer2.off()
-    one.on()
-    two.on()
-    three.off()
-    four.off()
+    led_leads(1, 1, 0, 0)
     sleep(sleepTime)
     # CYCLE 2
-    four.on()
-    two.on()
-    one.off()
-    three.off()
+    led_leads(0, 1, 0, 1)
     sleep(sleepTime)
     # CYCLE 3
-    three.on()
-    four.on()
-    one.off()
-    two.off()
+    led_leads(0, 0, 1, 1)
     sleep(sleepTime)
     # CYCLE 4
-    one.on()
-    three.on()
-    two.off()
-    four.off()
+    led_leads(1, 0, 1, 0)
     sleep(sleepTime)
 
 
@@ -108,6 +96,6 @@ def function_two():
 
 
 while True:
-    function_two()
+    wall_swing()
 
 

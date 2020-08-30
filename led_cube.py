@@ -17,7 +17,8 @@ three.off()
 four.off()
 
 
-def function_one():
+def wall_swing():
+    sleepTime = .5
     # CYCLE 1
     layer1.off()
     layer2.off()
@@ -46,7 +47,52 @@ def function_one():
     sleep(sleepTime)
 
 
+def function_two():
+    sleepTime = .5
+    # CYCLE 1
+    layer1.off()
+    layer2.on()
+    one.on()
+    two.off()
+    three.off()
+    four.off()
+    sleep(sleepTime)
+    # CYCLE 2
+    layer1.on()
+    layer2.off()
+    sleep(sleepTime)
+    # CYCLE 3
+    two.on()
+    one.off()
+    three.off()
+    four.off()
+    sleep(sleepTime)
+    # CYCLE 4
+    layer1.off()
+    layer2.on()
+    sleep(sleepTime)
+    # CYCLE 5
+    three.on()
+    two.off()
+    one.off()
+    four.off()
+    sleep(sleepTime)
+    # CYCLE 6
+    layer1.on()
+    layer2.off()
+    sleep(sleepTime)
+    # CYCLE 7
+    four.on()
+    one.off()
+    two.off()
+    three.off()
+    sleep(sleepTime)
+    # CYCLE 8
+    layer1.off()
+    layer2.on()
+
+
 while True:
-    function_one()
+    function_two()
 
 

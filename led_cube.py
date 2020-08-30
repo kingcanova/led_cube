@@ -95,7 +95,7 @@ def moving_pixel():
     sleep(sleepTime)
 
 
-def function3():
+def diagonal_bounce():
     sleepTime = .5
     # CYCLE 1
     layer1.off()
@@ -170,6 +170,8 @@ def function3():
 
 
 while True:
-    function3()
+    wall_swing()
+    moving_pixel()
+    diagonal_bounce()
 
 

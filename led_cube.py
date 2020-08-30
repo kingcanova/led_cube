@@ -39,6 +39,21 @@ def led_leads(a, b, c, d):
         four.off()
 
 
+def layer_leads(one, two):
+    if one == 0 and two == 1:
+        layer1.off()
+        layer2.on()
+    if one == 1 and two == 0:
+        layer2.off()
+        layer1.on()
+    if one == 0 and two == 0:
+        layer1.off()
+        layer2.off()
+    if one == 1 and two == 1:
+        layer1.on()
+        layer2.on()
+
+
 def wall_swing():
     sleepTime = .5
     # CYCLE 1
@@ -169,9 +184,27 @@ def diagonal_bounce():
     sleep(sleepTime)
 
 
+def wave():
+    sleepTime = .5
+    # CYCLE 1
+    layer_leads(0, 1)
+    led_leads(1, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 2
+    layer_leads(1, 0)
+    led_leads(1, 1, 0, 0)
+    sleep(sleepTime)
+    # CYCLE 3
+    layer_leads(0, 1)
+    led_leads(0, 0, 1, 1)
+    sleep(sleepTime)
+    # CYCLE 4
+    layer_leads(1, 0)
+    led_leads(0, 0, 1, 1)
+    sleep(sleepTime)
+
+
 while True:
-    wall_swing()
-    moving_pixel()
-    diagonal_bounce()
+    wave()
 
 
